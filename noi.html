@@ -715,18 +715,404 @@
 
 	<script id="ch0105/17">
 		var k = Number(prompt());
-		var a = 1;
-		var s0 = 0;
-		var s1 = 1;
-		var  s = 0;
-		while (a + 1 < k){
-			s = s +;
-			s = s + s;
-			a = a + 1;
+		var ak = 1;
+		if (k == 1) 
+			console.log(ak);
+		if (k == 2) 
+			console.log(ak);
+		if (k > 2) {
+			var akbefore = 1;
+			for (var count = 1; count <= k; count = count + 1;){
+				ak = ak + akbefore;
+				akbefore = ak -akbefore; 
+			}
+			console.log(ak);
 		}
 
-		console.log(one,five,ten);
 	</script>
+
+	<script id="ch0105/18">
+		var n = Number(prompt());
+		var sample1 = Number(prompt());
+		var sample2 = Number(prompt());
+		var effct1 = sample2 / sample1;
+
+		for (var count = 0; count < n; count = count + 1){
+			var sample1_new = Number(prompt());
+			var sample2_new = Number(prompt());
+			var effct2 = sample2_new / sample1_new;	
+			if (effct2 > effct1) 
+				console.log("beter");
+			else if (effct2 == effct1) 
+				console.log("same");
+			else if (effct2 < effct1) 
+				console.log("worse");
+		}
+	</script>
+
+	<script id="ch0105/19">
+		var n = Number(prompt());
+		var x = Number(prompt());
+		var y = Number(prompt());
+		var people = Number(prompt());
+		var s1 ;
+		var s2 = 0;
+
+		for (var count = 0; count < n; count++) {
+			s1 = math.sqrt(x * x +y * y) / 50;
+			s2 = 2 * s1 + people * 1.5 + s2;
+		}
+
+		console.log(s2);
+	</script>
+
+	<script id="ch0105/20">
+		var h = Number(prompt());
+		var l = 0;
+		var hk = h;
+
+		for (var count =0; count < 10; count++){
+			l = l + hk;
+			hk = hk / 2;
+		}
+
+		console.log(l,hk/2);
+	</script>
+
+	<script id="ch0105/21">
+		var n = Number(prompt());
+		var top;
+
+		while (n !== 1) {
+			if (n % 2 === 0){
+				top = String(n);
+				n = n * 3 + 1; 
+				console.log(top + "*3+1=" + n);
+			} else {
+				top = String(n);
+				n = n / 2; 
+				console.log(top + "/2=" + n);
+			} 
+				
+		console.log("end");
+	</script>
+
+	<script id="ch0105/22">		
+		var surplu = 0;
+		var month = 0;
+		var surplus = 0;
+		var saveWeek = 0;
+		var saveYear = 0;
+	
+		for ( var count = 1; count <= 12; count++) {
+			var budget = Number(prompt());
+			if (surplus + 300 < budget) {
+				month = -count;
+				count = 13;		
+			}
+
+			surplus = surplus + 300 - budget;
+			saveWeek = ((surplus % 100) | 0) * 100;
+			surplus = surplus - saveWeek;
+			saveYear = saveYear + saveWeek;
+		}
+
+		if (month < 0)
+			console.log(month);
+		else
+			console.log(saveYear * 1.2);	
+	</script>
+
+	<script id="ch0105/24">	
+	var n = Number(prompt());
+	var k = 0;
+
+	for (var count = 0; count < n; count++) {
+		var shrink = Number(prompt());
+		var diastole = Number(prompt());
+
+		if (shrink <= 140 && shrink >= 90) 
+			k = (diastole <= 90 && diastole >= 60) ? k + 1 : k;
+	}
+	console.log(k)
+
+	</script>
+
+	<script id="ch0105/25">	
+		var seven;
+		var nine;
+		var a;
+		var b;
+		var c;
+		var a;
+		var b;
+		var c;
+		var k;
+
+	for (var n = 0; n <= k; n++) {
+		seven = +n.toString(7);
+		nine = +n.toString(9);
+
+		if (seven < 1000 && nine < 1000) {
+			a1 = seven % 10;
+			b1 = (seven - a1)/10 % 10;
+			c1 = (seven - a1 - b1 * 10)/ 100;
+			a2 = seven % 10;
+			b2 = (seven - a1)/10 % 10;
+			c2 = (seven - a1 - b1 * 10)/ 100;
+			k = k + 1;
+
+			if (a1 == c2 && b1 == b2 && c1 == a2 && a1 != 0 && a2 != 0) {
+				console.log(n);
+				console.log(seven);
+				console.log(nine);
+			}
+		}
+	}
+
+	</script>
+
+	<script id="ch0105/26">
+		var n = Number(prompt());
+		var one;
+		var ten;
+		var hundred;
+		var thousand;
+		var shu = 0;
+		for (var count = 0; count < n; count++) {
+			var k = Number(prompt());
+
+			one = k % 10;
+			ten = (k -one)/10 % 10;
+			hundred = (k - one - ten * 10) / 100 % 10;
+			thousand = (k - one - ten * 10 - hundred * 100) / 1000;
+
+			if (one - (ten + hundred + thousand) > 0)
+				shu++;
+
+		}
+	</script>
+
+	<script id="ch0105/27">
+		var k = Number(prompt());
+		for (var n = 1; n  <= k; n++)
+
+		console.log(n)
+	</script>
+
+	<script id="ch0105/28">
+		var k = Number(prompt());
+		var y = "";
+		for (var n = 0; n  < n +k; n++){
+			out = k % 10;
+			k = Math.floor(k / 10);
+			y = y + out;
+		}
+		console.log(y)
+	</script>
+
+	<script id="ch0105/29">
+		var k = Number(prompt());
+		var out = "";
+		var a;
+
+		for ( var n =0; n < n + Math.abs(k); n++) {
+			a = Math.abs(k % 10);
+			k = Math.floor(k / 10);
+			out = out + a;
+
+			if (out == 0) 
+				out = Number(out);
+		}
+
+		if (k > 0) 
+			console.log(out);
+		else if (k == 0)
+			console.log(k);
+		else
+			console.log("-" + out)	
+	</script>
+
+	<script id="ch0105/30">
+		var m = Number(prompt());			
+		var k = Number(prompt());
+		var a;
+		var b = m;
+		var n = 0;
+
+		if (m % 19 == 0) {
+			for (var count = 0; count < (String(m).length); count++) {
+				a = b % 10;
+				n = (a - 3 == 0) ? n++ : n;
+				b = Math.floor(b / 10)
+			}
+			n == 3 ? console.log("YES") : console.log("NO");
+		} else 
+			console.log("NO");
+	</script>
+
+		<script id="ch0105/31">
+		var n = Number(prompt());			
+		var m = Number(prompt());
+		var a = 1;//默认打开状态
+		var out = "";
+
+		for (var countLamp = 1; countLamp <= n ) {
+			for (var countPeople = 1; countPeople <= m; countPeople++) {
+				a = (countLamp % countPeople === 0) ? -a : a;
+			}
+			out = (a < 0) ? (out + countLamp + ",") : out;
+		}
+
+		console.log(out.substr(0,out.length-1))
+	</script>
+
+	<script id="ch0105/37">
+		var m = Number(prompt());
+		var n = Number(prompt());
+		var x = Number(prompt());
+		var k;			
+		for (var count = 0 ; count < x; count++) {
+			k = n;
+			while (k <= m) {
+				n = n + 1;
+				k = k + n;
+			}
+		}
+		console.log(n);
+	</script>
+
+	<script id="ch0105/39">
+		var n = Number(prompt());
+		var out = 0;
+		var a;
+		var b;
+
+		for (var k = 0; k < n; k++) {
+
+			if ((k % 7) !== 0) {
+				b = k;
+				for (var count = 0; count < count + b; count++) {
+					a = b % 10;
+					b = (a === 7) ? 0 : Math.floor(b / 10);
+				}
+				out = (a === 0 || a === 7) ? out : out + k * k;
+			}
+		}
+
+		console.log(out);
+	</script>
+
+	<script id="ch0105/40">
+		var n = Number(prompt);
+		var k;
+		var alone;
+		var out;
+		for (var count = 1; count <= n; count++){
+			k = count;
+			while (1) {    //0 < k.length
+				alone = k % 10;
+				out = (alone === 1) ? out + 1 : out;
+				k = (k / 10) | 0;
+				if (k === 0)
+					break;
+			}
+		}
+		console.log(out);
+	</script>
+
+	<script id="ch0105/41">
+		var l = Number(prompt);
+		var r = Number(prompt);
+		var k;
+		var alone;
+		var out;
+		for (var count = l; count <= r; count++){
+			k = count;
+			while (1) {    //0 < k.length
+				alone = k % 10;
+				out = (alone === 2) ? out + 1 : out;
+				k = (k / 10) | 0;
+				if (k === 0)
+					break;
+			}
+		}
+		console.log(out);
+	</script>
+
+	<script id="ch0105/42">
+		var width = Number(prompt);
+		var height = Number(prompt);
+		var pattern = Number(prompt);
+		var shape = Number(prompt);
+		var b;
+		var a = "";
+
+		for (var count1 = 1; count1 <= height; count1++){
+		
+			for (var count2 = 1; count2 <= width; count2++) {				
+				b = pattern;
+				if (count1 > 1 || count1 < height ) {
+					if (count2 > 1 && count2 < width && shape === 0)
+						b = " ";
+				}
+				a = a + b;
+			}
+			console.log(a);
+		}
+	</script>
+
+
+	<script id="ch0105/43">
+		var n = Number(prompt);
+		var k1;
+		var k2;
+		var key = 0;
+
+		for (var count = 3; count <= n; count++) {
+			if ((n / count) % 1 === 1) {
+				for (var a = 2; a < count; a++) {
+					if ((count / a) % 1 === 1)
+						k1 = 0; 
+					else
+						k1 = 1;
+				} 
+				for (var b = 2; b < (n / count); b++) {
+					if ((count / b) % 1 === 1)
+						k2 = 0; 
+					else
+						k2 = 1;
+				} 
+
+				if (k1 ===1 && k2 === 1) 
+					key = (count > key) ? count : key; 
+				
+			}
+		}
+		console.log(key);
+	</script>
+
+
+	<script id="ch0105/45">
+		var sn = Number(prompt);
+		var n = (-1 + math.sqrt(8 * sn + 1)) / 2;
+		var nReal = n | 0;
+		var snReal = (nReal + nReal * nReal) / 2;
+		var gold = 0;
+		for (var count = 1; count <= nReal) {
+			gold = gold + count * count;
+		}
+		if (n > nReal) {
+			gold = gold + (sn - snReal) * (nReal + 1);
+		}
+		
+		console.log(gold);		
+	</script>
+
+
+
+
+
 
 
 
