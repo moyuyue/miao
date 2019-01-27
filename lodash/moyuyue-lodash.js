@@ -19,10 +19,9 @@ var moyuyue = function(){
   	return ary.filter(item => item)
   }
 
-  function difference(ary) {
-  	var a = ary[0];
-  	var b = [].concat(...ary.slice(1))
-  	return a.filter(item => b.indexOf(item) != -1)
+  function difference(array, ...values) {
+  	var b = [].concat(...values)
+  	return array.filter(item => b.indexOf(item) == -1)
   }
 
   return {
