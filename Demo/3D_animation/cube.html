@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head> 
+  <meta charset="UTF-8" /> 
+  <title>cube</title> 
+  <!-- <link rel="stylesheet" href="h.css"> -->
+  <style>
+
+    html, body {
+      height: 100%;
+    }
+    * {
+    background-color: rgba(0, 0, 0, 0.08);
+  }
+  body > span {
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+    
+    line-height: 100px;
+    text-align: center;
+    margin: 10px 0px;
+
+    cursor: pointer;
+  }
+
+  main {
+    width: 500px;
+    margin: 100px auto 0px auto;
+    height: 500px;
+    position: relative;
+    background-color: transparent;
+  }
+  /* angle */
+  div.angle {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    transform-style: preserve-3d;
+    top: 50%;
+    left: 50%;
+    transform: translatex(-50%) translatey(-50%) rotatex(45deg) rotatey(35deg);
+    background-color: transparent;
+  }
+
+  div.angle div {
+    transform-style: preserve-3d;
+    animation-duration: 100s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-play-state: paused;
+    height: 100%;
+  }
+
+  div.angle > div {
+    background-color: transparent;
+    transform-style: preserve-3d;
+  }
+
+  div.angle > div > div {
+    background-color: orange;
+    opacity: 0.6;
+  }
+  
+  /* cube */
+  main div.cube {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    transform-style: preserve-3d;
+    transform: translatex(-50%) translatey(-50%) rotatex(360deg);
+    transition: 5s;
+    background-color: transparent;
+
+  }
+  main div.cube span {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+  }
+  main div.cube > span:nth-child(1) {
+    transform: translatez(100px);
+    opacity: 0.8;
+    background-color: rgb(74, 194, 235);
+  }
+  main div.cube > span:nth-child(2) {
+    transform: rotatey(180deg) translatez(100px);
+    opacity: 0.8;
+    background-color: rgb(74, 194, 235);
+  }
+  main div.cube > span:nth-child(3) {
+    transform: rotatex(90deg) translatez(100px);
+    opacity: 0.8;
+    background-color: rgb(74, 194, 235);
+  }
+  main div.cube > span:nth-child(4) {
+    transform: rotatex(-90deg) translatez(100px);
+    opacity: 0.8;
+    background-color: rgb(74, 194, 235);
+  }
+  main div.cube > span:nth-child(5) {
+    transform: rotatey(90deg) translatez(100px);
+    opacity: 0.8;
+    background-color: rgb(74, 194, 235);
+  }
+  main div.cube > span:nth-child(6) {
+    transform: rotatey(-90deg) translatez(100px);
+    opacity: 0.8;
+    background-color: rgb(74, 194, 235);
+  }
+  
+  main, main span.change {
+    transform-style: preserve-3d;
+
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+    display: block;
+  }
+
+  main span.change {
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    background-color: transparent;
+  }
+  /* bind the direction */
+  
+  body > span:nth-of-type(1):active ~ main {
+    animation-play-state: running;
+  }
+  body > span:nth-of-type(2):active ~ main > span {
+    animation-play-state: running;
+  }
+  body > span:nth-of-type(3):active ~ main > span > span {
+    animation-play-state: running;
+  }
+  body > span:nth-of-type(4):active ~ main > span > span > span{
+    animation-play-state: running;
+  }
+  body > span:nth-of-type(5):active ~ main > span > span > span > span{
+    animation-play-state: running;
+  }
+  body > span:nth-of-type(6):active ~ main > span > span > span > span > span{
+    animation-play-state: running;
+  }
+  body > span:nth-of-type(7):active ~ main > span > span > span > span > span div.angle > div{
+    animation-play-state: running;
+  }
+  body > span:nth-of-type(8):active ~ main > span > span > span > span > span div.angle > div > div{
+    animation-play-state: running;
+  }
+  /* animation */
+  @keyframes f_x_1 {
+    form {
+      transform: rotatex(0deg);
+    }
+    to {
+      transform: rotatex(360deg);
+    }
+  }
+  
+  @keyframes f_x_2 {
+    form {
+      transform: rotatex(0deg);
+    }
+    to {
+      transform: rotatex(-360deg);
+    }
+  }
+  
+  @keyframes f_y_1 {
+    form {
+      transform: rotatey(0deg);
+    }
+    to {
+      transform: rotatey(360deg);
+    }
+  }
+  
+  @keyframes f_y_2 {
+    form {
+      transform: rotatey(0deg);
+    }
+    to {
+      transform: rotatey(-360deg);
+    }
+  }
+  
+  @keyframes f_z_1 {
+    form {
+      transform: rotatez(0deg);
+    }
+    to {
+      transform: rotatez(360deg);
+    }
+  }
+  
+  @keyframes f_z_2 {
+    form {
+      transform: rotatez(0deg);
+    }
+    to {
+      transform: rotatez(-360deg);
+    }
+  }
+  @keyframes angle_1 {
+    form {
+      transform: translatez(0px);
+    }
+    to {
+      transform: translatez(-9000px);
+    }
+  }
+  
+  @keyframes angle_2 {
+    form {
+      transform: translatez(0px);
+    }
+    to {
+      transform: translatez(9000px);
+    }
+  }
+  /* set the animation */
+  body > main {
+    animation-name: f_x_1;
+  }
+  body > main > span {
+    animation-name: f_x_2;
+  }
+  body > main > span > span {
+    animation-name: f_y_1;
+  }
+  body > main > span > span > span {
+    animation-name: f_y_2;
+  }
+  body > main > span > span > span > span {
+    animation-name: f_z_1;
+  }
+  body > main > span > span > span > span > span{
+    animation-name: f_z_2;
+  }
+  body > main > span > span > span > span > span > div.angle > div {
+    animation-name: angle_1;
+  }
+  body > main > span > span > span > span > span > div.angle > div > div{
+    animation-name: angle_2;
+  }
+  </style>
+ </head> 
+ <body> 
+  <span tabindex="1" class="s1">X顺时针方向</span>
+  <span tabindex="2" class="s2">X逆时针方向</span>
+  <span tabindex="3" class="s3">Y顺时针方向</span>
+  <span tabindex="4" class="s4">Y逆时针方向</span>
+  <span tabindex="5" class="s5">Z顺时针方向</span>
+  <span tabindex="6" class="s6">Z逆时针方向</span>
+  <span tabindex="7" class="s7">α正方向</span>
+  <span tabindex="8" class="s8">α反方向</span>
+  <br>
+  <main> 
+    <span class="change">
+      <span class="change">
+        <span class="change">
+          <span class="change">
+            <span class="change"> 
+              <div class="cube"> 
+               <span></span> 
+               <span></span> 
+               <span></span> 
+               <span></span> 
+               <span></span> 
+               <span></span> 
+              </div>
+              <div class="angle">
+                <div>
+                  <div></div>
+                </div>
+              </div>
+            </span>
+          </span>
+        </span>
+      </span>
+    </span> 
+  </main>  
+ </body>
+</html>

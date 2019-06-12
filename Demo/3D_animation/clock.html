@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style>
+    main {
+      margin: 100px;
+      padding: 20px;
+      width: 200px;
+      
+      background-color: gold;
+    }
+
+    div {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      background-color: white;
+      
+      
+      border-radius: 100px;
+      
+      xborder: 1px solid blue;
+    }
+
+
+    @keyframes se{
+      0% {
+        transform: rotate(90deg);
+      }
+      100% {
+        transform: rotate(450deg);
+      }
+    }
+
+    .a1 {
+      position: absolute;
+      width: 100px;
+      height: 0;
+
+      border-top: 1px solid black;
+      border-bottom: 1px solid black;
+      top: 99px;
+      left: 30px;
+
+      transform-origin: 70px 1px; 
+
+      animation: se 60s infinite steps(60, end);
+    }
+
+    @keyframes mi{
+      0% {
+        transform: rotate(30deg);
+      }
+      100% {
+        transform: rotate(390deg);
+      }
+    }
+     .a2 {
+      position: absolute;
+      width: 70px;
+      height: 0;
+      border-top: 2px solid black;
+      border-bottom: 2px solid black;
+      top: 98px;
+      left: 30px;
+      transform-origin: 70px 2px;
+     
+      animation: mi 3600s infinite steps(60, end);
+    } 
+    @keyframes hour{
+      0% {
+        transform: rotate(-30deg);
+      }
+      100% {
+        transform: rotate(330deg);
+      }
+    }
+    .a3 {
+      position: absolute;
+      width: 50px;
+      height: 0;
+
+      border-top: 4px solid black;
+      border-bottom: 4px solid black;
+      top: 96px;
+      left: 50px;
+      transform-origin: 50px 4px;
+      
+      animation: hour 43200s infinite linear;
+
+    }
+
+
+
+    .a4 {
+      position: absolute;
+      width: 0;
+      height: 0;
+      border: 6px solid black;
+      
+      border-radius: 6px;
+      
+      left: 0px;
+      right: 0px;
+      top: 0px;
+      bottom: 0px;
+      margin: auto;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    section {
+      position: absolute;
+      font-weight: bold;
+      font-size: 20px;
+      
+      left: 0px;
+      right: 0px;
+      width: 30px;
+      text-align: center;
+      /* border: 1px solid; */
+      
+      transform-origin: 15px 100px;
+      margin: 0px auto;
+      
+      transition: 2s;
+    }
+    span {
+      position: absolute;
+      left: 0px;
+      right: 0px;
+      margin: 0px auto;
+    }
+    .s1 {
+      transform: rotate(30deg);
+    }
+    .s1 span {
+      transform: rotate(-30deg);
+    }
+    .s2 {
+      transform: rotate(60deg);
+    }
+    .s2 span{
+      transform: rotate(-60deg);
+    }
+    .s3 {
+      transform: rotate(90deg);
+    }
+    .s3 span{
+      transform: rotate(-90deg);
+    }
+    .s4 {
+      transform: rotate(120deg);
+    }
+    .s4 span{
+      transform: rotate(-120deg);
+    }
+    .s5 {
+      transform: rotate(150deg);
+    }
+    .s5 span{
+      transform: rotate(-150deg);
+    }
+    .s6 {
+      transform: rotate(180deg);
+    }
+    .s6 span{
+      transform: rotate(-180deg);
+    }
+    .s7 {
+      transform: rotate(210deg);
+    }
+    .s7 span{
+      transform: rotate(-210deg);
+    }
+    .s8 {
+      transform: rotate(240deg);
+    }
+    .s8 span{
+      transform: rotate(-240deg);
+    }
+    .s9 {
+      transform: rotate(270deg);
+    }
+    .s9 span{
+      transform: rotate(-270deg);
+    }
+    .s10 {
+      transform: rotate(300deg);
+    }
+    .s10 span{
+      transform: rotate(-300deg);
+    }
+    .s11 {
+      transform: rotate(330deg);
+    }
+    .s11 span{
+      transform: rotate(-330deg);
+    }
+    .s12 {
+      transform: rotate(360deg);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div>
+      <section class="s1">
+        <span>1</span>
+      </section>
+      <section class="s2">
+      <span>2</span>
+      </section>
+      <section class="s3">
+      <span>3</span>
+      </section>
+      <section class="s4">
+      <span>4</span>
+      </section>
+      <section class="s5">
+      <span>5</span>
+      </section>
+      <section class="s6">
+      <span>6</span>
+      </section>
+      <section class="s7">
+      <span>7</span>
+      </section>
+      <section class="s8">
+      <span>8</span>
+      </section>
+      <section class="s9">
+      <span>9</span>
+      </section>
+      <section class="s10">
+      <span>10</span>
+      </section>
+      <section class="s11">
+      <span>11</span>
+      </section>
+      <section class="s12">
+      <span>12</span>
+      </section>
+
+      <aside class="a1"></aside>
+      <aside class="a2"></aside>
+      <aside class="a3"></aside>
+      
+      <aside class="a4"></aside>
+    </div>
+   </main>
+</body>
+</html>
