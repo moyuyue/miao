@@ -1,0 +1,37 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "14846193",
+      "name": "龟背竹",
+      "font_class": "2",
+      "unicode": "e623",
+      "unicode_decimal": 58915
+    },
+    {
+      "icon_id": "14846262",
+      "name": "绿植1",
+      "font_class": "lvzhi1",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    },
+    {
+      "icon_id": "14871019",
+      "name": "绿植8",
+      "font_class": "lvzhi8",
+      "unicode": "e62a",
+      "unicode_decimal": 58922
+    },
+    {
+      "icon_id": "14871021",
+      "name": "绿植10",
+      "font_class": "lvzhi10",
+      "unicode": "e62b",
+      "unicode_decimal": 58923
+    }
+  ]
+}
